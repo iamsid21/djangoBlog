@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Front Page{% endblock title %}
+
+{% block body %}
+
+{% for post in posts %}
+    <main class="container">
+    <div class="row mb-2">
+    <div class="col-md-8">
+    <article class="blog-post">
+        <h2 class="blog-post-title">{{post.title}}</h2>
+        <p class="blog-post-meta">{{post.date_added}} by <a href="https://www.linkedin.com/in/siddharth-pathak21/">Sid</a></p>
+    
+        <p>
+            {{post.intro}}
+        </p>
+        <hr>
+        <p>
+            {{post.body}}
+        </p>
+      </article>
+    </div>
+    </div>
+    </main>
+{% endfor %}
+
+{% endblock body %}
